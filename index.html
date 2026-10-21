@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>دليل النجاح الطلابي</title>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F8F9;--surface:#fff;--ink:#14262B;--muted:#4F6A70;--teal:#0B4F5C;--gold:#E0A526;--mint:#D5ECE6;--line:#C9DDE1;--bad:#C23B54;--on-teal:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1A1D;--surface:#16282C;--ink:#E8F2F3;--muted:#9DB6BB;--teal:#5CC2C9;--gold:#F0B93D;--mint:#1C3A3B;--line:#2A4448;--bad:#F0718A;--on-teal:#0E1A1D}}
+:root[data-theme="dark"]{--bg:#0E1A1D;--surface:#16282C;--ink:#E8F2F3;--muted:#9DB6BB;--teal:#5CC2C9;--gold:#F0B93D;--mint:#1C3A3B;--line:#2A4448;--bad:#F0718A;--on-teal:#0E1A1D}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Readex Pro',Tahoma,'Segoe UI',sans-serif;line-height:1.9;font-size:16px}
+.wrap{max-width:720px;margin:0 auto;padding:20px 16px 48px}
+.cover{background:var(--teal);color:var(--on-teal);border-radius:28px 28px 28px 6px;padding:28px 22px;margin-bottom:18px}
+.school{display:inline-block;min-width:140px;border-bottom:2px dashed var(--gold);font-weight:600;font-size:15px;outline:none}
+.cover h1{font-size:34px;line-height:1.3;margin:14px 0 6px;font-weight:700}
+.cover p{margin:0;opacity:.88;font-size:15px}
+.bar{height:8px;background:var(--line);border-radius:8px;overflow:hidden;margin:0 0 6px}
+.bar i{display:block;height:100%;width:0;background:var(--gold);transition:width .4s}
+.pl{font-size:13px;color:var(--muted);margin-bottom:12px}
+nav{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:10px}
+nav button{flex:0 0 auto;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;font-size:14px;padding:6px 14px;border-radius:20px;cursor:pointer}
+nav button[aria-selected=true]{background:var(--teal);color:var(--on-teal);border-color:var(--teal)}
+nav button.done::after{content:" ✓";color:var(--gold);font-weight:700}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+section{display:none;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:22px 18px}
+section.on{display:block}
+h2{margin:0 0 4px;font-size:24px;color:var(--teal)}
+.idea{color:var(--muted);margin:0 0 16px}
+.tip{background:var(--mint);border-radius:14px;padding:10px 14px;font-size:14.5px;margin:0 0 18px}
+h3{font-size:16px;margin:0 0 10px}
+label{display:block;font-size:14px;margin:10px 0 2px;color:var(--muted)}
+input[type=text],select{width:100%;font:inherit;padding:9px 12px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink)}
+.btn{margin-top:14px;border:0;background:var(--gold);color:#14262B;font:inherit;font-weight:600;padding:10px 22px;border-radius:14px;cursor:pointer}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{font:inherit;font-size:14px;padding:6px 14px;border-radius:18px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+.chips button[aria-pressed=true]{background:var(--teal);color:var(--on-teal);border-color:var(--teal)}
+.out{margin-top:14px;padding:12px 14px;border-radius:14px;background:var(--bg);border-inline-start:5px solid var(--gold);min-height:20px}
+.row{display:grid;grid-template-columns:1fr 54px;gap:10px;align-items:center}
+.row b{text-align:center}
+input[type=range]{width:100%;accent-color:var(--teal)}
+.q{padding:10px 0;border-bottom:1px solid var(--line)}
+.ok{color:var(--teal);font-weight:600}.no{color:var(--bad);font-weight:600}
+.bars{display:flex;gap:10px;align-items:flex-end;height:110px;margin-top:12px}
+.bars div{flex:1;background:var(--teal);border-radius:8px 8px 0 0;position:relative;min-height:6px;transition:height .3s}
+.bars span{position:absolute;top:-22px;inset-inline:0;text-align:center;font-size:13px}
+.bars.l{height:auto;align-items:flex-start;font-size:12px;color:var(--muted);margin-top:2px}.bars.l div{background:none;min-height:0;text-align:center}
+.fin{display:none;margin-top:18px;background:var(--teal);color:var(--on-teal);border-radius:22px;padding:20px;text-align:center;font-weight:600}
+.fin.on{display:block}
+.opt{color:var(--ink);margin:4px 0}.tl{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}.tile{font:inherit;font-size:14px;padding:6px 14px;border-radius:12px;border:1.5px dashed var(--gold);background:var(--bg);color:var(--ink);cursor:grab}.zone{display:flex;justify-content:space-between;gap:10px;width:100%;text-align:start;font:inherit;font-size:14px;padding:10px 12px;margin-top:8px;border-radius:12px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}.zone.okz{background:var(--mint);border-color:var(--teal)}.slot{color:var(--teal);white-space:nowrap}.pn{display:flex;justify-content:space-between;margin-top:16px}.pn button{font:inherit;padding:8px 20px;border-radius:14px;border:1.5px solid var(--teal);background:none;color:var(--teal);cursor:pointer}.pn button:disabled{opacity:.35;cursor:default}ul.g{padding-inline-start:20px;margin:0 0 12px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="cover">
+<span class="school">المتوسطة الثامنة والتسعون</span>
+<h1>دليل النجاح الطلابي</h1>
+<p>كُتيّب تفاعلي للصف الثالث المتوسط ضمن مجال التنمية الذاتية في «قيمنا حياة»</p>
+</header>
+<div class="bar"><i id="pb"></i></div>
+<div class="pl" id="pt">أنجزتَ 0 من 6 أنشطة</div>
+<nav id="nav" role="tablist"></nav>
+<section><h2>أهداف الكُتيّب</h2>
+<p class="idea">بعد إتمام هذا الدليل سأكون قادرًا على أن:</p>
+<ul class="g"><li>أربط هدفي بدافع شخصي يستمر معي.</li><li>أوزّع وقتي بين الدراسة والنوم والترفيه بتوازن.</li><li>أميّز بين المهم والعاجل وأرتّب مهامي.</li><li>أكتب خطة واضحة بموعد وكمية.</li><li>أقيّم أسبوعي وأختار خطوة للتحسّن.</li></ul>
+<p class="tip">ستجد في كل وحدة فكرة قصيرة ونصيحة ونشاطًا يعطيك نتيجة فورية، وفي النهاية اختبار ختامي.</p>
+<button class="btn" data-go="1">ابدأ بالتحفيز الذاتي</button></section>
+
+<section><h2>التحفيز الذاتي</h2>
+<p class="idea">الدافع الذي ينبع من داخلك يستمر أطول من أي مكافأة خارجية.</p>
+<p class="tip">اربط هدفك بسبب يخصّك أنت، فالسبب هو وقودك حين يتعب الحماس.</p>
+<h3>نشاط: ثبّت هدفك</h3>
+<label for="g">هدفي لهذا الفصل</label><input type="text" id="g" placeholder="مثال: رفع درجتي في الرياضيات">
+<label>لماذا يهمني؟ (اختر ما يناسبك)</label>
+<div class="chips" id="why"></div>
+<button class="btn" id="b1">ثبّت هدفي</button><div class="out" id="o1"></div></section>
+
+<section><h2>إدارة الوقت</h2>
+<p class="idea">اليوم 24 ساعة للجميع، والفرق في طريقة توزيعها.</p>
+<p class="tip">ابدأ بالنوم والدراسة ثم وزّع الباقي، ولا تترك وقت الراحة للصدفة.</p>
+<h3>نشاط: وزّع ساعات يومك</h3><div id="ts"></div>
+<div class="out" id="o2"></div></section>
+
+<section><h2>تحديد الأولويات</h2>
+<p class="idea">ليست كل المهام بنفس القيمة، فسؤال «ما الأهم؟» يوفّر عليك الكثير.</p>
+<p class="tip">المهم هو ما يخدم أهدافك، والعاجل هو ما يطلب انتباهك الآن.</p>
+<h3>نشاط: صنّف المهام</h3><div id="pq"></div>
+<button class="btn" id="b3">تحقّق من إجاباتي</button><div class="out" id="o3"></div>
+<h3 style="margin-top:22px">نشاط إضافي: اسحب المصطلح إلى تعريفه</h3>
+<p class="idea" style="margin-bottom:8px">اسحب المصطلح وأفلته على التعريف، أو اضغط المصطلح ثم التعريف.</p>
+<div class="tl" id="tl"></div><div id="zn"></div><div class="out" id="om">اختر مصطلحًا للبدء.</div></section>
+
+<section><h2>التخطيط الجيد</h2>
+<p class="idea">الهدف الواضح القابل للقياس أقرب إلى التحقق من أمنية عامة.</p>
+<p class="tip">اكتب ماذا تريد، وكم، ومتى، فلا يبقى مجال للتأجيل.</p>
+<h3>نشاط: ابنِ خطتك</h3>
+<label for="p1">أريد أن</label><input type="text" id="p1" placeholder="أحفظ 10 كلمات إنجليزية جديدة">
+<label for="p2">كل</label><input type="text" id="p2" placeholder="يوم بعد صلاة المغرب">
+<label for="p3">حتى تاريخ</label><input type="text" id="p3" placeholder="نهاية الأسبوع القادم">
+<button class="btn" id="b4">اكتب خطتي</button><div class="out" id="o4"></div></section>
+
+<section><h2>التقييم والتطوير المستمر</h2>
+<p class="idea">من يراجع نفسه كل أسبوع يتحسّن أسرع ممن ينتظر نهاية العام.</p>
+<p class="tip">قيّم بصدق، فالرقم المنخفض نقطة بداية لا حكم عليك.</p>
+<h3>نشاط: بطاقة الأسبوع (من 1 إلى 5)</h3><div id="rv"></div>
+<div class="bars" id="rb"></div><div class="bars l" id="rl"></div>
+<div class="out" id="o5">حرّك المؤشرات ثم اضغط «احسب أسبوعي».</div>
+<button class="btn" id="b5">احسب أسبوعي</button></section>
+
+<section><h2>الاختبار الختامي</h2>
+<p class="idea">أربعة أسئلة تقيس ما تعلّمته. تحتاج 3 إجابات صحيحة لتكمل الدليل.</p>
+<div id="qz"></div><button class="btn" id="bq">صحّح إجاباتي</button><div class="out" id="oq"></div></section>
+<section><h2>الملخص والمراجع</h2>
+<ul class="g"><li>التحفيز الذاتي: هدف واضح وسبب شخصي.</li><li>إدارة الوقت: 24 ساعة بتوازن ونوم كافٍ.</li><li>الأولويات: المهم أولًا، والعاجل غير المهم يُختصر.</li><li>التخطيط: ماذا، وكم، ومتى.</li><li>التقييم: مراجعة أسبوعية وخطوة تحسين واحدة.</li></ul>
+<h3>عُد إلى أي وحدة</h3><div class="chips"><button data-go="1">التحفيز الذاتي</button><button data-go="2">إدارة الوقت</button><button data-go="3">الأولويات</button><button data-go="4">التخطيط</button><button data-go="5">التقييم</button><button data-go="0">الأهداف</button></div>
+<h3 style="margin-top:18px">المراجع</h3>
+<p class="idea">قيمنا حياة، دليل المعلم، المجال الرابع: التنمية الذاتية (مهارات النجاح، التواصل الفعّال، حل المشكلات واتخاذ القرار).<br>توجهات رؤية السعودية 2030 في تنمية القدرات والمهارات.</p></section>
+<div class="pn"><button id="pv">السابق</button><button id="nx">التالي</button></div>
+<div class="fin" id="fin">أحسنتَ! أتممتَ الأنشطة والاختبار الختامي، وخطتك تبدأ من اليوم.</div>
+</div>
+<script>
+const $=id=>document.getElementById(id),names=['الأهداف','التحفيز الذاتي','إدارة الوقت','تحديد الأولويات','التخطيط الجيد','التقييم والتطوير','الاختبار الختامي','الملخص'],secs=[...document.querySelectorAll('section')],done=new Set();
+const nav=$('nav');
+names.forEach((n,i)=>{const b=document.createElement('button');b.textContent=n;b.setAttribute('role','tab');b.onclick=()=>show(i);nav.appendChild(b)});
+let cur=0;function show(i){cur=i;secs.forEach((s,j)=>s.classList.toggle('on',i===j));[...nav.children].forEach((b,j)=>b.setAttribute('aria-selected',i===j));$('pv').disabled=i===0;$('nx').disabled=i===secs.length-1;window.scrollTo(0,0)}
+function fin(i){done.add(i);nav.children[i+1].classList.add('done');const n=done.size;$('pb').style.width=n*100/6+'%';$('pt').textContent='أنجزتَ '+n+' من 6 أنشطة';$('fin').classList.toggle('on',n===6)}
+show(0);
+// 1
+const reasons=['أثبت قدرتي لنفسي','أفخر بنفسي وأسرتي','أفتح لي باب مستقبل أفضل','أحب هذا المجال'],sel=new Set();
+reasons.forEach(r=>{const b=document.createElement('button');b.textContent=r;b.setAttribute('aria-pressed','false');b.onclick=()=>{const on=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',on);on?sel.add(r):sel.delete(r)};$('why').appendChild(b)});
+$('b1').onclick=()=>{const g=$('g').value.trim();if(!g||!sel.size){$('o1').textContent='اكتب هدفك واختر سببًا واحدًا على الأقل.';return}
+$('o1').textContent='هدفي: '+g+'. سأستمر لأنه '+[...sel].join(' و')+'.';fin(0)};
+// 2
+const ts=[['الدراسة والواجبات',4],['النوم',8],['الجوال والترفيه',3],['الأسرة والأنشطة',3]],tv=[];
+ts.forEach(([n,v],i)=>{const d=document.createElement('div');d.className='row';d.innerHTML=`<div><label for="t${i}">${n}</label><input type="range" id="t${i}" min="0" max="12" value="${v}"></div><b id="tv${i}">${v}</b>`;$('ts').appendChild(d);tv.push(d.querySelector('input'))});
+function calc(){const v=tv.map(x=>+x.value);v.forEach((x,i)=>$('tv'+i).textContent=x);const t=v.reduce((a,b)=>a+b),o=$('o2');
+if(t>24)o.innerHTML='<span class="no">المجموع '+t+' ساعة، وهو أكثر من 24. خفّض '+(t-24)+' ساعة.</span>';
+else if(t<24)o.textContent='المجموع '+t+' ساعة. بقي '+(24-t)+' ساعة غير موزعة.';
+else if(v[1]<7)o.innerHTML='<span class="no">وزّعتَ 24 ساعة، لكن النوم أقل من 7 ساعات وهذا قليل في سنّك.</span>';
+else{o.innerHTML='<span class="ok">توزيع متوازن: 24 ساعة بنوم كافٍ. </span>'+(v[2]>v[0]?'جرّب أن تجعل الدراسة أكبر من الترفيه.':'');fin(1)}}
+tv.forEach(x=>x.oninput=calc);calc();
+// 3
+const tasks=[['اختبار غدًا','a'],['تمرين رياضي أسبوعي منتظم','b'],['الرد على رسائل المجموعة الآن','c'],['تصفح مقاطع عشوائية','d']],opts={a:'مهم وعاجل: أفعله الآن',b:'مهم وغير عاجل: أحدد له موعدًا',c:'عاجل وغير مهم: أختصره أو أفوضه',d:'غير مهم وغير عاجل: أقلله'};
+tasks.forEach(([t],i)=>{const d=document.createElement('div');d.className='q';d.innerHTML=`<label for="q${i}">${t}</label><select id="q${i}"><option value="">اختر</option>${Object.entries(opts).map(([k,v])=>`<option value="${k}">${v}</option>`).join('')}</select>`;$('pq').appendChild(d)});
+$('b3').onclick=()=>{let s=0,h='';tasks.forEach(([t,k],i)=>{const v=$('q'+i).value;if(v===k)s++;else if(v)h+='<div class="no">«'+t+'»: '+opts[k]+'</div>'});
+$('o3').innerHTML='<span class="'+(s===4?'ok':'no')+'">'+s+' من 4 صحيحة.</span>'+h;if(s===4)fin(2)};
+// 4
+$('b4').onclick=()=>{const a=$('p1').value.trim(),b=$('p2').value.trim(),c=$('p3').value.trim();if(!a||!b||!c){$('o4').textContent='املأ الحقول الثلاثة ليصبح هدفك واضحًا.';return}
+$('o4').textContent='خطتي: سأ'+a.replace(/^أ/,'')+' كل '+b.replace(/^كل\s*/,'')+' حتى '+c+'.';fin(3)};
+// 5
+const rs=['التزمتُ بخطتي','أنجزتُ أولوياتي','نمتُ كفاية','تعلمتُ شيئًا جديدًا'],rv=[];
+rs.forEach((n,i)=>{const d=document.createElement('div');d.className='row';d.innerHTML=`<div><label for="r${i}">${n}</label><input type="range" id="r${i}" min="1" max="5" value="3"></div><b id="rn${i}">3</b>`;$('rv').appendChild(d);rv.push(d.querySelector('input'))});
+rs.forEach((n,i)=>{const l=document.createElement('div');l.textContent=n;$('rl').appendChild(l);const b=document.createElement('div');b.innerHTML='<span></span>';$('rb').appendChild(b)});
+function draw(){rv.forEach((x,i)=>{$('rn'+i).textContent=x.value;const b=$('rb').children[i];b.style.height=(x.value*20)+'%';b.firstChild.textContent=x.value})}
+rv.forEach(x=>x.oninput=draw);draw();
+$('b5').onclick=()=>{const v=rv.map(x=>+x.value),m=Math.min(...v),avg=(v.reduce((a,b)=>a+b)/4).toFixed(1);
+$('o5').innerHTML='متوسط أسبوعك <b>'+avg+'</b> من 5. أولى خطوات التطوير: «'+rs[v.indexOf(m)]+'». اختر إجراءً صغيرًا واحدًا له هذا الأسبوع.';fin(4)};
+document.addEventListener('click',e=>{const g=e.target.closest('[data-go]');if(g)show(+g.dataset.go)});
+$('pv').onclick=()=>show(cur-1);$('nx').onclick=()=>show(cur+1);
+const md=['القدرة على دفع نفسي نحو هدفي دون انتظار مكافأة','توزيع ساعات اليوم على المهام بحكمة','مراجعة أدائي كل أسبوع لأتحسّن'],mt=['التحفيز الذاتي','إدارة الوقت','التقييم المستمر'];let cs=null;
+function put(z){const o=$('om');if(+z.dataset.k===+cs.dataset.k){z.querySelector('.slot').textContent=cs.textContent;z.classList.add('okz');cs.remove();o.innerHTML='<span class="ok">صحيح!</span>'}else o.innerHTML='<span class="no">ليست المطابقة الصحيحة، حاول مرة أخرى.</span>';cs=null}
+[1,2,0].forEach(k=>{const t=document.createElement('button');t.className='tile';t.textContent=mt[k];t.dataset.k=k;t.draggable=true;t.onclick=()=>{cs=t;$('om').textContent='اختر الآن التعريف المناسب لـ «'+mt[k]+'».'};t.ondragstart=()=>{cs=t};$('tl').appendChild(t)});
+md.forEach((d,k)=>{const z=document.createElement('button');z.className='zone';z.dataset.k=k;z.innerHTML='<span>'+d+'</span><b class="slot">؟</b>';z.onclick=()=>cs&&put(z);z.ondragover=e=>e.preventDefault();z.ondrop=e=>{e.preventDefault();cs&&put(z)};$('zn').appendChild(z)});
+const qz=[['أي مثال يعبّر عن التحفيز الذاتي؟',['أذاكر لأحصل على هدية','أذاكر لأن أخي يراقبني','أذاكر لأنني أريد تحقيق هدفي'],2],['مهمة مهمة وغير عاجلة مثل الرياضة المنتظمة، ماذا أفعل؟',['أحدد لها موعدًا ثابتًا','أؤجلها دائمًا','أتجاهلها'],0],['أي هدف كُتب بشكل جيد؟',['أريد أن أتحسّن','سأذاكر كثيرًا','سأحفظ 10 كلمات كل يوم حتى نهاية الشهر'],2],['لماذا نقيّم أنفسنا كل أسبوع؟',['لنلوم أنفسنا','لنعرف نقاط القوة ونحسّن الضعف','لنقارن أنفسنا بالآخرين'],1]];
+qz.forEach(([q,o],i)=>{const d=document.createElement('div');d.className='q';d.innerHTML='<b>'+(i+1)+'. '+q+'</b>'+o.map((x,j)=>`<label class="opt"><input type="radio" name="z${i}" value="${j}"> ${x}</label>`).join('')+'<div id="zf'+i+'"></div>';$('qz').appendChild(d)});
+$('bq').onclick=()=>{let s=0;qz.forEach(([q,o,c],i)=>{const v=document.querySelector('input[name=z'+i+']:checked'),f=$('zf'+i);if(!v){f.innerHTML='<span class="no">اختر إجابة.</span>';return}if(+v.value===c){s++;f.innerHTML='<span class="ok">إجابة صحيحة.</span>'}else f.innerHTML='<span class="no">الصحيح: '+o[c]+'</span>'});$('oq').innerHTML='درجتك <b>'+s+'</b> من '+qz.length+(s>=3?'. أحسنت!':'. راجع الوحدات وأعد المحاولة.');if(s>=3)fin(5)};
+</script>
+</body>
+</html>
